@@ -32,23 +32,13 @@ android {
 }
 
 afterEvaluate {
-//    publishing {
-//        publications {
-//            release(MavenPublication) {
-//                from components.release
-//                groupId = 'com.github.rikomathers'
-//                artifactId = 'stars-rating-view'
-//                version = '1.0.7'
-//            }
-//        }
-//    }
     publishing {
         publications {
-            maven(MavenPublication) {
-                groupId = 'org.company'
-                artifactId = 'sample'
-                version = "0.9-SNAPSHOT"
+            release(MavenPublication) {
                 from components.release
+                groupId = 'com.github.rikomathers'
+                artifactId = 'stars-rating-view'
+                version = '1.0.7'
             }
         }
     }
