@@ -37,8 +37,8 @@ class StarsRatingView(
                     value
                 }
                 invalidate()
+                onRatingChangeListener?.onRatingChanged(rating)
             }
-            onRatingChangeListener?.onRatingChanged(rating)
         }
 
     private var starWidth = 0.0f
@@ -390,7 +390,7 @@ class StarsRatingView(
         private const val defaultStarHeight = heightCoefficient * defaultStarWidth
     }
 
-    interface OnRatingChangeListener {
+    fun interface OnRatingChangeListener {
         fun onRatingChanged(rating: Float)
     }
 
